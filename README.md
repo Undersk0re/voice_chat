@@ -10,6 +10,7 @@ git clone https://github.com/MariyaSha/voice_chat.git
 cd voice_chat
 
 conda create -n env_name python=3.11
+conda activate env_name
 pip install -r requirements.txt
 python voice_chat.py
 ```
