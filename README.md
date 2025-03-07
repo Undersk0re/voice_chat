@@ -43,30 +43,12 @@ Try different voices (instead of gTTS, using pyttsx3)
 ```
 import pyttsx3
 
-# Initialize the TTS engine
-engine = pyttsx3.init()
-
-# Text to convert to speech
 text = "Hello, this is a test with different voices."
 
-# Get available voices
+# Initialize the TTS engine
+engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-
-# Example: Use the first two available voices (if they exist)
-for i, voice in enumerate(voices[:2]):  # Limit to first 2 voices for simplicity
-    print(f"Using voice {i}: {voice.name} ({voice.id})")
-    
-    # Set the voice
-    engine.setProperty('voice', voice.id)
-    
-    # Optional: Adjust rate (words per minute) and volume (0.0 to 1.0)
-    engine.setProperty('rate', 150)  # Default is around 200
-    engine.setProperty('volume', 0.9)  # Max is 1.0
-    
-    # Speak and save to file
-    engine.say(text)
-    engine.save_to_file(text, f"hello_voice_{i}.mp3")
-    
-    # Run and wait for completion
-    engine.runAndWait()
+engine.setProperty('voice', voices[0].id)
+engine.say(text)
+engine.runAndWait()
 ```
