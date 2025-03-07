@@ -47,8 +47,12 @@ text = "Hello, this is a test with different voices."
 
 # Initialize the TTS engine
 engine = pyttsx3.init()
+
+# Select Voice by Index
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
+
+# Play Audio
 engine.say(text)
 engine.runAndWait()
 ```
