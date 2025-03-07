@@ -15,7 +15,7 @@ python voice_chat.py
 ```
 
 ## Customize Application
-Try different accents
+### Different Accents
 ```
 from gtts import gTTS
 
@@ -37,9 +37,8 @@ tts_au.save("hello_au.mp3")
 tts_in = gTTS(text=text, lang='en', tld='co.in')
 tts_in.save("hello_in.mp3")
 ```
-<br>
 
-Try different voices (instead of gTTS, using pyttsx3)
+### Different Voices
 ```
 import pyttsx3
 
