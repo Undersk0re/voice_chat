@@ -39,7 +39,6 @@ class LowLevelAPI:
         if response.status_code != 200:
             return f"Errore: {response.status_code} - {response.text}"
         json_response = response.json()
-        json_response = json_response["response"]
         return json_response["response"] 
 
 
