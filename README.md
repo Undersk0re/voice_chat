@@ -45,6 +45,8 @@ command = /usr/bin/python3 -m venv /media/simone/USB_projects/ATTIVI/Community/v
 ```
 
 
+Then you need to add your Ollama endpoint in `secrets.py`
+
 
 ## Customize Application
 ### Different Accents
