@@ -1,0 +1,1 @@
+LLM_uri="http://YOUR_ENDPOINT_HERE:11434/api/generate"

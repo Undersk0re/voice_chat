@@ -45,7 +45,8 @@ class LowLevelAPI:
 
 
 #################################################
-# This code will work perfectly for all ollama installed models, please fille the "model_list" for increase stability
+# This code will work perfectly for all ollama installed models, 
+# please fill the "model_list" for increase stability
 #################################################
 ollama_model = LowLevelAPI('llama3.2:1b') 
 
