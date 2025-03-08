@@ -1,0 +1,3 @@
+.venv_voice_chat/
+secrets.py
+*.pyc
