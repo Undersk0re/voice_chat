@@ -1,18 +1,50 @@
 # Voice Chat
-a console voice chat application using small Language Models on CPU
+a console voice chat application using small Language Models Usin OLLAMA installed in some server (is a pre-requirement)
 
 ## Run Application
 please make sure a microphone is connected and available on your system before you run the following code in your console.
-And sadly, Windows only! (additional setup is required to enable microphone/speaker access for WSL2/Linux systems)
+
 ```
 git clone https://github.com/MariyaSha/voice_chat.git
 cd voice_chat
 
-conda create -n env_name python=3.11
-conda activate env_name
-pip install -r requirements.txt
-python voice_chat.py
+python3 -m venv .venv_voice_chat
+source .venv_voice_chat/bin/activate
+pip install -r requirements.txt # or using a requirements_D.txt for a dev environment
 ```
+
+If you use Windows please follow original README
+
+If you use linux (debian) run
+```
+sudo apt install python3-pyaudio
+```
+
+
+Then you need to modify  `.venv_voice_chat/pyvenv.cfg` in this way if you have
+
+From
+
+```
+home = /usr/bin
+include-system-site-packages = false
+version = 3.11.2
+executable = /usr/bin/python3.11
+command = /usr/bin/python3 -m venv /media/simone/USB_projects/ATTIVI/Community/voice_chat/.venv_voice_chat
+
+```
+
+To
+
+```
+home = /usr/bin
+include-system-site-packages = true
+version = 3.11.2
+executable = /usr/bin/python3.11
+command = /usr/bin/python3 -m venv /media/simone/USB_projects/ATTIVI/Community/voice_chat/.venv_voice_chat
+```
+
+
 
 ## Customize Application
 ### Different Accents
@@ -55,3 +87,7 @@ engine.setProperty('voice', voices[0].id)
 engine.say(text)
 engine.runAndWait()
 ```
+
+
+
+#### Enjoy chat (=

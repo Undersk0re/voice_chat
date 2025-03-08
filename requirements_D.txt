@@ -1,0 +1,9 @@
+speechrecognition
+gtts
+sty
+keyboard
+pygame
+# PyAudio apt install
+
+
+
